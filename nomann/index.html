@@ -1,35 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A note-taking application that helps you stay organized.">
-    <meta name="theme-color" content="#000000">
     <title>L.I.N.K</title>
-
-    <!-- App Links metadata for SEO and to encourage mobile app installation -->
-    <meta property="al:android:url" content="nomann://note">
+    <meta property="al:android:url" content="https://galvinvoltag.github.io/galvinvoltag.com/note">
     <meta property="al:android:package" content="com.galvinvoltag.nomann">
-    <meta property="al:android:app_name" content="NOMANN">
+    <meta property="al:android:app_name" content="Nomann Notes">
+    <script>
+        const appScheme = 'nomann://note';
+        const fallbackUrl = 'https://galvinvoltag.github.io/galvinvoltag.com/';
+        window.location.href = appScheme;  // Try to open the app
+        setTimeout(function() {
+            window.location.href = fallbackUrl;  // If the app isn't installed, stay on the website or go to fallback
+        }, 2000);  // Timeout in case the app is not installed (2 seconds to account for slower app opening)
+    </script>
 </head>
 <body>
     <h1>you should not be here</h1>
-    <script>
-        // Optional: Automatically redirect mobile users to the app if it's installed
-        const appScheme = 'nomann://note';
-        const fallbackUrl = 'https://galvinvoltag.github.io/galvinvoltag.com/';
-
-        function openApp() {
-            window.location.href = appScheme;  // Try to open the app
-            setTimeout(function() {
-                window.location.href = fallbackUrl;  // If the app isn't installed, stay on the website or go to fallback
-            }, 2000);  // Timeout in case the app is not installed (2 seconds to account for slower app opening)
-        }
-
-        // Trigger app open if on mobile
-        if (/android|iphone|ipad|iPod/i.test(navigator.userAgent)) {
-            openApp();  // Automatically try to open the app on mobile devices
-        }
-    </script>
+    
 </body>
 </html>
