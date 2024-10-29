@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>L.I.N.K O0O</title>
+    <title>L.I.N.K O-O</title>
     <meta property="al:android:url" content="https://galvinvoltag.github.io/galvinvoltag.com/note">
     <meta property="al:android:package" content="com.galvinvoltag.nomann">
     <meta property="al:android:app_name" content="Nomann Notes">
@@ -11,9 +11,8 @@
 
         const appScheme = "nomann://note"
 
-        if (note) {
-            appScheme += '/title=' + title;
-        }
+        appScheme += '/title=' + title;
+
         window.location.href = appScheme;  // Try to open the app
     </script>
 </head>
