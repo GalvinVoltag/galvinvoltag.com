@@ -9,7 +9,7 @@
         const urlParams = new URLSearchParams(window.location.search);
         const note = urlParams.get('note');
 
-        const appScheme = note;
+        const appScheme = '${encodeURIComponent(note)}';
         window.location.href = appScheme;  // Try to open the app
     </script>
 </head>
